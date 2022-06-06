@@ -1,0 +1,26 @@
+server:
+  port: 9000
+  servlet:
+    context-path: /apis
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://dbhost:3306/crypto_comunity?useSSL=false&characterEncoding=utf8
+    password: password
+    username: username
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 3072KB
+      max-request-size: 3500KB
+
+app:
+  auth:
+    tokenSecret: 926D96C98830DD12429D2751AC2BDBAA
+    tokenExpirationMsec: 864000000
+logging:
+  path: /var/log/propatek
+uploadfile:
+  domain: http://172.104.185.85:8080/fileattach/rest/fileattach
+  root-folder: /home/ductbm/deployment/dataUpload/
+  data-folder: data/
