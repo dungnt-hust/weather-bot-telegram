@@ -15,7 +15,7 @@ import org.springframework.web.client.RestTemplate;
 public class RestTemplateUtil {
 
 
-    public <T> ResponseEntity<T> callApi(HttpEntity<?> requestEntity, String url, HttpMethod method, String custom, Class<T> clazz) {
+    public static <T>  ResponseEntity<T> callApi(HttpEntity<?> requestEntity, String url, HttpMethod method, String custom, Class<T> clazz) {
         RestTemplate restTemplate = new RestTemplate();
         ParameterizedTypeReference<T> typeReference = ParameterizedTypeReference.forType(clazz);
         if (!StringUtils.isEmpty(custom)) {

@@ -15,7 +15,6 @@ public class LoginRequestDto implements Request {
     @NotNull(message = "4000001")
     @NotEmpty(message = "4000001")
     private String username;
-
     private String password;
 
     private String group;
